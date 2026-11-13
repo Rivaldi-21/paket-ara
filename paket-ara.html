@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buat Ara 💖 dari Aldi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF9F5;--pink:#FFD6E0;--lav:#E2D4F0;--peach:#FFE5D9;--ink:#4A3F45;--card:#fffaf7;--bd:#fff;--sh1:#f1c7d4;--sh2:#c9a4d455;--acc:#f08aa6;--m1:#ffd6e0;--m2:#e2d4f0;--m3:#ffe5d9;--m4:#d4ecf7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241c26;--card:#3a2f3d;--bd:#55465a;--sh1:#2a2030;--sh2:#0007;--ink:#fbeff3;--pink:#5a3544;--lav:#41364f;--peach:#55403a;--m1:#5a3544;--m2:#41364f;--m3:#55403a;--m4:#2f4a55}}
+:root[data-theme="dark"]{--bg:#241c26;--card:#3a2f3d;--bd:#55465a;--sh1:#2a2030;--sh2:#0007;--ink:#fbeff3;--pink:#5a3544;--lav:#41364f;--peach:#55403a;--m1:#5a3544;--m2:#41364f;--m3:#55403a;--m4:#2f4a55}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:'Quicksand',system-ui,sans-serif;font-weight:500;color:var(--ink);overflow-x:hidden;background:radial-gradient(at 20% 20%,var(--m1) 0,transparent 50%),radial-gradient(at 80% 10%,var(--m2) 0,transparent 50%),radial-gradient(at 70% 80%,var(--m3) 0,transparent 50%),radial-gradient(at 10% 85%,var(--m4) 0,transparent 50%),var(--bg);background-size:200% 200%;animation:mesh 16s ease-in-out infinite alternate}
+@keyframes mesh{to{background-position:100% 100%}}
+h1,h2,.fr{font-family:'Fredoka','Quicksand',sans-serif;font-weight:600}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+.hidden{display:none!important}
+.float{position:fixed;pointer-events:none;z-index:1;user-select:none}
+.cloud{position:fixed;font-size:70px;opacity:.55;pointer-events:none;z-index:0;animation:drift linear infinite}
+@keyframes drift{from{transform:translateX(-120px)}to{transform:translateX(calc(100vw + 120px))}}
+.star{position:fixed;pointer-events:none;z-index:0;animation:tw 2.5s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15;transform:scale(.5)}}
+#app{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:14px 16px 110px}
+.clay{background:var(--card);border:5px solid var(--bd);border-radius:34px;box-shadow:0 7px 0 var(--sh1),0 18px 30px var(--sh2)}
+.bounce{transition:transform .3s cubic-bezier(.34,1.9,.5,1)}
+.bounce:hover{transform:translateY(-4px) scale(1.03) rotate(-.8deg)}
+.bounce:active{transform:scale(.95)}
+.btn{background:linear-gradient(135deg,#ffa6bf,#f08aa6);color:#fff;font-weight:700;padding:12px 22px;border-radius:99px;border:4px solid #fff;box-shadow:0 6px 0 #d96d8c,0 12px 16px #f08aa655;font-size:16px;transition:transform .3s cubic-bezier(.34,1.9,.5,1),box-shadow .15s}
+.btn:hover{transform:translateY(-3px) scale(1.06) rotate(-1.5deg)}
+.btn:active{transform:translateY(4px) scale(.94);box-shadow:0 2px 0 #d96d8c}
+.btn.alt{background:linear-gradient(135deg,#cdb8ee,#b497dd);box-shadow:0 6px 0 #9378c4,0 12px 16px #b497dd55}
+section{position:relative;padding:26px 20px 20px;margin-top:6px;animation:pop .5s cubic-bezier(.34,1.7,.5,1) both}
+section::before{content:'';position:absolute;top:-13px;left:50%;width:96px;height:26px;margin-left:-48px;transform:rotate(-3deg);background:repeating-linear-gradient(45deg,#ffd6e0cc 0 8px,#fff8 8px 16px);border-radius:4px;box-shadow:0 2px 4px #0002}
+section h2{margin:0 0 4px;font-size:23px}
+.sub{margin:0 0 14px;opacity:.85;font-size:15px}
+@keyframes pop{from{transform:scale(.7) rotate(-2deg);opacity:0}}
+#gate{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
+#gate h1{font-size:clamp(22px,6vw,32px);margin:0;line-height:1.3}
+#box{background:none;padding:0;animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 12px 14px #f08aa655)}
+#box .lid{transition:transform .7s cubic-bezier(.3,1.6,.5,1);transform-origin:20px 70px}
+#box.open{animation:none}#box.open .lid{transform:translateY(-34px) rotate(-18deg)}
+#greet{max-width:440px;padding:18px 20px;line-height:1.6}
+@keyframes bob{50%{transform:translateY(-12px) rotate(2deg)}}
+header{text-align:center}
+.mb{padding:10px 14px 12px;margin:0 auto 6px;max-width:460px}
+.mbt{display:flex;justify-content:space-between;font-weight:700;font-size:14px;margin-bottom:6px}
+.meter{height:20px;background:var(--lav);border-radius:99px;overflow:hidden;border:3px solid var(--bd)}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffb3c6,#f08aa6,#ffcf7f);border-radius:99px;transition:width .6s cubic-bezier(.34,1.4,.5,1)}
+#mwrap{display:inline-block;width:min(230px,58vw);cursor:pointer;animation:bob 3.2s ease-in-out infinite}
+#mwrap.jump{animation:jump .6s cubic-bezier(.3,1.5,.5,1)}
+@keyframes jump{30%{transform:translateY(-34px) scaleY(1.1)}60%{transform:translateY(0) scaleY(.88)}}
+#mascot{width:100%;height:auto;display:block;overflow:visible}
+#armR{transform-origin:86px 112px}#armL{transform-origin:34px 112px}
+.wave #armR{animation:wv .45s ease-in-out 5}
+@keyframes wv{50%{transform:rotate(-55deg)}}
+#bubble{display:inline-block;padding:8px 16px;margin:2px 0 8px;font-size:14px;max-width:92%;border-radius:22px;border-width:4px;box-shadow:0 4px 0 var(--sh1)}
+nav{display:flex;gap:8px;overflow-x:auto;padding:8px 4px 14px;scrollbar-width:none}
+nav button{flex:0 0 auto;background:var(--card);padding:9px 15px;border-radius:99px;font-weight:700;font-size:14px;border:4px solid var(--bd);box-shadow:0 4px 0 var(--sh1)}
+nav button.on{background:var(--pink);box-shadow:0 4px 0 var(--acc)}
+.moods{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mood{background:var(--peach);border-radius:26px;padding:16px 8px;font-weight:700;font-size:15px;border:4px solid var(--bd);box-shadow:0 5px 0 var(--sh1)}
+.mood b{display:block;font-size:34px}
+.reply{margin-top:14px;background:var(--pink);border-radius:24px;padding:16px;line-height:1.65;border:4px solid var(--bd);animation:pop .4s both}
+#arena{position:relative;height:350px;border-radius:26px;background:linear-gradient(180deg,var(--lav),var(--pink));overflow:hidden;touch-action:manipulation;border:4px solid var(--bd)}
+.bb{position:absolute;bottom:-110px;width:110px;text-align:center;cursor:pointer;user-select:none;animation:wob 1.2s ease-in-out infinite}
+.bb svg{width:110px;height:76px;display:block;filter:drop-shadow(0 4px 0 #0002)}
+.bb span{display:inline-block;margin-top:-4px;background:#fff;color:#4A3F45;border-radius:99px;padding:2px 8px;font-size:11px;font-weight:700;box-shadow:0 2px 0 #0002}
+@keyframes wob{50%{transform:rotate(5deg) scale(1.05)}}
+.score{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:700;gap:8px;flex-wrap:wrap}
+#combo{font-family:'Fredoka';color:#e0527c;font-size:20px;min-height:26px;text-align:center;margin-top:6px}
+.hugs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:8px 0}
+#env{display:block;margin:0 auto;background:none;padding:0;filter:drop-shadow(0 10px 8px #c9a4d455)}
+#paper{margin:14px auto 0;max-width:460px;background:#fffbe8 repeating-linear-gradient(transparent 0 27px,#f0dfae 27px 28px);color:#4A3F45;border-radius:8px 8px 22px 8px;padding:22px 20px;line-height:28px;white-space:pre-wrap;min-height:200px;box-shadow:4px 8px 0 #e8d7a8;transform-origin:top;animation:unfold .7s both;border-left:4px solid #ffb3c6}
+@keyframes unfold{from{transform:scaleY(.05) rotate(-5deg);opacity:0}}
+#note{margin:14px auto 0;max-width:420px;background:#fffbe8;color:#4A3F45;border-radius:6px 6px 18px 6px;padding:20px;line-height:1.65;text-align:center;box-shadow:3px 6px 0 #e8d7a8;transform-origin:top;animation:unfold .6s both}
+.cps{display:grid;gap:14px}
+.cp{position:relative;display:flex;align-items:center;gap:12px;text-align:left;background:var(--peach);border-radius:22px;padding:14px 16px;border:3px dashed var(--acc);overflow:hidden;box-shadow:0 5px 0 var(--sh1)}
+.cp em{font-size:32px;font-style:normal}
+.cp small{display:block;opacity:.75;font-weight:500}
+.cp .st{position:absolute;right:10px;top:50%;font-family:'Fredoka';font-size:15px;color:#e0527c;border:3px solid #e0527c;border-radius:10px;padding:2px 8px;transform:translateY(-50%) rotate(-12deg) scale(0);opacity:0;background:#fff9;transition:.35s cubic-bezier(.3,1.8,.5,1)}
+.cp.on .st{transform:translateY(-50%) rotate(-12deg) scale(1);opacity:1}
+.row{display:flex;justify-content:center;margin-top:14px}
+.fab{position:fixed;z-index:40;border-radius:50%;display:flex;align-items:center;justify-content:center;border:4px solid #fff}
+#fab{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:76px;height:76px;flex-direction:column;background:linear-gradient(135deg,#ff8fab,#ff5d8f);color:#fff;font-size:28px;line-height:1;box-shadow:0 6px 0 #d63d70,0 14px 20px #ff5d8f66;animation:pulse 1.8s infinite}
+#fab small{font-size:10px;font-weight:700;margin-top:2px}
+@keyframes pulse{50%{transform:scale(1.09) rotate(-4deg)}}
+#mbtn{left:14px;top:calc(14px + env(safe-area-inset-top,0px));width:50px;height:50px;background:var(--lav);font-size:22px;box-shadow:0 4px 0 #b497dd}
+#mbtn.on{animation:spin 4s linear infinite;background:var(--pink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+#modal{position:fixed;inset:0;z-index:80;background:#0006;display:flex;align-items:center;justify-content:center;padding:24px}
+#modal .clay{max-width:360px;padding:26px 22px;text-align:center;line-height:1.6;animation:pop .5s both}
+#toast{position:fixed;left:50%;bottom:calc(104px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;opacity:0;transition:.3s;z-index:90;font-weight:700;pointer-events:none;text-align:center;max-width:88vw}
+#toast.show{transform:translate(-50%,0);opacity:1}
+.care{display:flex;gap:10px;justify-content:center;margin:2px 0 10px;flex-wrap:wrap}
+.pill{background:var(--card);border:3px solid var(--bd);border-radius:99px;padding:7px 14px;font-weight:700;font-size:12.5px;box-shadow:0 3px 0 var(--sh1)}
+#chatBox{max-height:320px;overflow-y:auto;padding:6px 2px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+.cb{max-width:78%;padding:10px 14px;border-radius:20px;line-height:1.5;font-size:14.5px;animation:pop .3s both;border:3px solid var(--bd)}
+.cb.me{align-self:flex-end;background:var(--pink);border-bottom-right-radius:6px}
+.cb.bot{align-self:flex-start;background:var(--lav);border-bottom-left-radius:6px}
+#typing{font-size:13px;opacity:.7;margin:4px 2px;font-style:italic}
+.chatRow{display:flex;gap:8px;margin-top:10px}
+.chatRow input{flex:1;border-radius:99px;border:3px solid var(--bd);padding:10px 16px;font:inherit;background:var(--card);color:var(--ink);min-width:0}
+textarea.ta{width:100%;border-radius:18px;border:3px solid var(--bd);padding:14px;font:inherit;background:var(--card);color:var(--ink);resize:vertical}
+#cv{width:100%;touch-action:none;border-radius:20px;border:4px solid var(--bd);display:block;cursor:crosshair}
+.sw{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 0 #0002;padding:0;flex:0 0 auto}
+.sw.on{outline:3px solid var(--acc);outline-offset:2px}
+.mini{padding:8px 14px;font-size:13px}
+footer{text-align:center;margin-top:24px;font-size:14px;opacity:.9}
+.sh{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div id="gate">
+  <h1>Ada paket khusus buat Ara 📦✨<br><small style="font-weight:500;font-size:.6em">(Isi: 100% Semangat &amp; Anti-Galau)</small></h1>
+  <button id="box" aria-label="Buka paket">
+    <svg width="200" height="180" viewBox="0 0 160 150" aria-hidden="true">
+      <rect x="20" y="70" width="120" height="70" rx="12" fill="#FFD6E0" stroke="#fff" stroke-width="5"/>
+      <rect x="72" y="70" width="16" height="70" fill="#E2D4F0"/>
+      <g class="lid"><rect x="12" y="46" width="136" height="28" rx="11" fill="#FFE5D9" stroke="#fff" stroke-width="5"/>
+      <rect x="72" y="46" width="16" height="28" fill="#E2D4F0"/>
+      <path d="M80 46 C60 14 36 30 80 46 C124 30 100 14 80 46Z" fill="#f08aa6" stroke="#fff" stroke-width="3"/></g>
+      <text x="80" y="118" text-anchor="middle" font-size="22">💌</text>
+    </svg>
+  </button>
+  <div id="hint" class="sub">Klik paketnya ya, Ra 👆</div>
+  <div id="greet" class="clay hidden">
+    <div>Hai Ara! Aku bikinin sesuatu yang kecil-kecilan buat kamu hari ini, semoga bisa bikin kamu senyum dikit ya...<br><b>— dari Aldi 💌</b></div>
+    <p><button class="btn" id="enter">Buka Sekarang 🌷</button></p>
+  </div>
+</div>
+
+<main id="main" class="hidden">
+  <header>
+    <div class="mb clay"><div class="mbt"><span>Mood Booster Ara: <span id="lvl">Mode Melow 🥺</span></span><b id="mp">0%</b></div><div class="meter"><i id="mf"></i></div></div>
+    <div id="mwrap" class="wave">
+    <svg id="mascot" viewBox="-20 -2 160 172" aria-label="Maskot kucing">
+      <ellipse cx="60" cy="166" rx="42" ry="6" fill="#0000001a"/>
+      <path d="M92 142 Q130 140 118 108" stroke="#FFD6E0" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <ellipse cx="60" cy="130" rx="33" ry="31" fill="#FFE5D9" stroke="#f08aa6" stroke-width="3"/>
+      <ellipse cx="60" cy="136" rx="19" ry="17" fill="#fff8f2"/>
+      <ellipse cx="44" cy="159" rx="13" ry="7" fill="#FFD6E0" stroke="#f08aa6" stroke-width="3"/><ellipse cx="76" cy="159" rx="13" ry="7" fill="#FFD6E0" stroke="#f08aa6" stroke-width="3"/>
+      <g id="armL"><ellipse cx="26" cy="124" rx="9" ry="17" fill="#FFE5D9" stroke="#f08aa6" stroke-width="3" transform="rotate(14 26 124)"/></g>
+      <g id="armR"><ellipse cx="94" cy="124" rx="9" ry="17" fill="#FFE5D9" stroke="#f08aa6" stroke-width="3" transform="rotate(-14 94 124)"/></g>
+      <path d="M26 44 L22 14 L48 30Z M94 44 L98 14 L72 30Z" fill="#FFD6E0" stroke="#f08aa6" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M28 36 L27 22 L40 30Z M92 36 L93 22 L80 30Z" fill="#ff9fb9"/>
+      <ellipse cx="60" cy="66" rx="44" ry="38" fill="#FFE5D9" stroke="#f08aa6" stroke-width="3"/>
+      <g id="eyes" style="transform-origin:60px 56px"></g>
+      <ellipse cx="32" cy="74" rx="9" ry="6" fill="#ff9fb9" opacity=".7"/><ellipse cx="88" cy="74" rx="9" ry="6" fill="#ff9fb9" opacity=".7"/>
+      <path d="M56 68 L64 68 L60 73Z" fill="#e0527c"/>
+      <path id="mouth" d="M48 78 Q54 86 60 78 Q66 86 72 78" fill="none" stroke="#4A3F45" stroke-width="3" stroke-linecap="round"/>
+      <g id="extra"></g>
+      <g stroke="#f08aa6" stroke-width="2" stroke-linecap="round"><path d="M16 64 L3 60 M16 70 L3 72 M104 64 L117 60 M104 70 L117 72"/></g>
+    </svg></div><br>
+    <div id="bubble" class="clay">Hai Ara, aku di sini ya 🌸</div>
+    <div class="care"><button id="careDrink" class="pill bounce">Sudah Minum 🥛</button><button id="careEat" class="pill bounce">Sudah Makan 🍜</button></div>
+  </header>
+  <nav id="nav">
+    <button data-t="mood" class="on">🫶 Mood</button>
+    <button data-t="chat">🐱 Ngobrol</button>
+    <button data-t="game">☁️ Pecahin Bad Vibes</button>
+    <button data-t="hug">🤗 Peluk &amp; Puk-puk</button>
+    <button data-t="jar">🫙 Toples</button>
+    <button data-t="burn">🔥 Bakar Kenangan</button>
+    <button data-t="capsule">⏳ Kapsul Waktu</button>
+    <button data-t="draw">🎨 Coret-coret</button>
+    <button data-t="letter">💌 Surat</button>
+    <button data-t="cp">🎟️ Kupon</button>
+  </nav>
+
+  <section id="mood" class="clay"><h2>Gimana perasaan kamu hari ini, Ra?</h2><p class="sub">Pilih yang paling jujur, gak ada jawaban salah kok.</p>
+    <div class="moods" id="moods"></div><div class="reply hidden" id="moodReply"></div></section>
+
+  <section id="game" class="clay hidden"><h2>Pecahin Bad Vibes &amp; Red Flags!</h2><p class="sub">Awan-awan mendung ini harus dienyahin! Pecahin cepat-cepat biar dapet combo 💥</p>
+    <div class="score"><span>Bad Vibes Disingkirkan: <b id="sc">0</b></span><button class="btn alt" id="mute" style="padding:6px 14px;font-size:14px">🔊 Suara</button></div>
+    <div id="arena"></div><div id="combo"></div><div class="reply hidden" id="gameReply"></div></section>
+
+  <section id="hug" class="clay hidden"><h2>Mesin Peluk &amp; Puk-puk dari Aldi</h2><p class="sub">Klik sebanyak yang kamu mau. Gak ada batasnya.</p>
+    <div class="hugs"><button class="btn" id="bHug">Klik buat Peluk Virtual 🤗</button><button class="btn alt" id="bPat">Puk-puk Kepala Ara 🖐️✨</button></div>
+    <div class="score" style="margin-top:12px"><span>Love meter 💗</span><span id="lv">0%</span></div><div class="meter"><i id="lm"></i></div>
+    <div class="reply" id="hugReply">Klik salah satu tombol di atas, Aldi udah siapin pelukannya 🫂</div></section>
+
+  <section id="jar" class="clay hidden"><h2>Toples Kebahagiaan</h2><p class="sub">Isinya alasan kenapa kamu itu keren. Klik toplesnya!</p>
+    <button id="jar-b" class="bounce" aria-label="Ambil kertas dari toples" style="background:none;padding:0;display:block;margin:0 auto">
+      <svg width="200" height="230" viewBox="0 0 200 230">
+        <rect x="52" y="14" width="96" height="26" rx="10" fill="#E2D4F0" stroke="#b497dd" stroke-width="3"/>
+        <path d="M60 40 H140 Q168 60 168 100 V190 Q168 222 136 222 H64 Q32 222 32 190 V100 Q32 60 60 40Z" fill="#ffffff77" stroke="#b497dd" stroke-width="3"/>
+        <g id="papers"></g>
+        <path d="M48 96 Q46 140 52 180" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".8"/>
+      </svg></button>
+    <div id="note" class="hidden"></div>
+    <p class="sub" style="text-align:center;margin-top:12px">Kertas dibuka: <b id="jc">0</b>/16</p></section>
+
+  <section id="letter" class="clay hidden"><h2>Surat Buat Ara</h2><p class="sub">Ada surat yang nunggu kamu buka, Ra 💌</p>
+    <button id="env" class="bounce" aria-label="Buka surat">
+      <svg width="230" height="170" viewBox="0 0 230 170">
+        <rect x="10" y="30" width="210" height="130" rx="14" fill="#FFD6E0" stroke="#fff" stroke-width="5"/>
+        <path d="M14 38 L115 108 L216 38" fill="#ffc2d3" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M14 156 L96 90 M216 156 L134 90" stroke="#fff" stroke-width="3" opacity=".8"/>
+        <circle cx="115" cy="104" r="19" fill="#f08aa6" stroke="#fff" stroke-width="4"/><text x="115" y="111" text-anchor="middle" font-size="18">💖</text>
+        <text x="115" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="#4A3F45" font-family="Quicksand">Untuk: Ara | Dari: Aldi</text>
+      </svg></button>
+    <div id="paper" class="hidden"></div>
+    <div class="row hidden" id="again"><button class="btn alt" id="replay">Baca lagi 🔁</button></div></section>
+
+  <section id="cp" class="clay hidden"><h2>Kupon Spesial Buat Ara</h2><p class="sub">Klaim sesukamu. Berlaku selamanya, tanpa syarat &amp; ketentuan 😌</p>
+    <div class="cps" id="cps"></div>
+    <div class="row"><button class="btn" id="copy">Salin Kupon yang Diklaim 📋</button></div>
+    <p class="sub" style="text-align:center;margin-top:10px">Tempel ke chat dan kirim balik ke Aldi ya 💌</p></section>
+
+  <section id="chat" class="clay hidden"><h2>Ngobrol sama Mochi</h2><p class="sub">Certain apa aja, Ra. Mochi dengerin kok, gak akan motong ceritamu.</p>
+    <div id="chatBox"></div>
+    <div id="typing" class="hidden">Mochi sedang mengetik...</div>
+    <div class="chatRow"><input id="chatIn" type="text" placeholder="Ketik sesuatu, Ra..." maxlength="300"><button id="chatSend" class="btn mini">Kirim</button></div></section>
+
+  <section id="burn" class="clay hidden"><h2>Bakar Kenangan</h2><p class="sub">Tulis hal yang bikin capek hati, terus ubah jadi debu bintang ✨</p>
+    <textarea id="burnIn" class="ta" rows="4" placeholder="Tulis di sini, Ra... janji palsu, kata-kata yang nyakitin, apa aja boleh"></textarea>
+    <div class="row"><button id="burnBtn" class="btn">Ubah Jadi Debu Bintang ✨</button></div>
+    <div id="burnCard" class="reply hidden"></div></section>
+
+  <section id="capsule" class="clay hidden"><h2>Kapsul Waktu</h2><p class="sub">Tulis satu harapan atau pesan buat Ara 7 hari lagi.</p>
+    <textarea id="capIn" class="ta" rows="4" placeholder="Tulis harapan atau pesan buat diri kamu sendiri..."></textarea>
+    <div class="row"><button id="capBtn" class="btn alt">Segel Kapsul Waktu 🔒✨</button></div>
+    <div id="capMsg" class="reply hidden"></div></section>
+
+  <section id="draw" class="clay hidden"><h2>Coret-coret</h2><p class="sub">Gambar bebas, tempel stiker, simpan hasilnya buat kenang-kenangan.</p>
+    <canvas id="cv" width="640" height="400"></canvas>
+    <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px" id="palette"></div>
+    <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center">
+      <input id="brush" type="range" min="2" max="22" value="6">
+      <button data-s="💖" class="btn alt mini sticker">💖</button>
+      <button data-s="🌸" class="btn alt mini sticker">🌸</button>
+      <button data-s="⭐" class="btn alt mini sticker">⭐</button>
+      <button data-s="🐱" class="btn alt mini sticker">🐱</button>
+      <button id="stUndo" class="btn alt mini">↩️ Hapus</button>
+      <button id="stClear" class="btn alt mini">🗑️ Bersihin</button>
+    </div>
+    <div class="row" style="margin-top:10px"><button id="saveDraw" class="btn">Simpan Gambarku 📸</button></div></section>
+
+  <footer>Dibuat khusus buat Ara — dari Aldi 🌷<br>Kamu gak sendirian, Aldi ada di sini.</footer>
+</main>
+</div>
+
+<button id="mbtn" class="fab bounce hidden" aria-label="Kotak musik">🎵</button>
+<button id="fab" class="fab hidden" aria-label="Darurat butuh semangat">🚨<small>Darurat!</small></button>
+<div id="modal" class="hidden"><div class="clay"><div style="font-size:42px" id="mEm">💖</div><div id="mTx" style="font-size:17px;margin:8px 0 14px"></div><div style="display:flex;flex-direction:column;gap:10px;align-items:center"><button class="btn" id="mClose">Hehe oke, tutup ✨</button><a href="https://wa.me/6281297379391?text=Di%2C%20aku%20lagi%20butuh%20temen%20cerita%20nih..." target="_blank" rel="noopener" class="btn alt" style="text-decoration:none;font-size:14px;padding:10px 18px">Masih butuh temen ngobrol? Panggil Aldi 📞</a></div></div></div>
+<div id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const COL=['#FFD6E0','#E2D4F0','#FFE5D9','#ff9fb9','#c9b2ea','#ffd27f','#bfe8d8'];
+let muted=false, actx=null, tab='mood';
+
+/* ===== Latar: awan & bintang ===== */
+for(let i=0;i<4;i++){const c=document.createElement('span');c.className='cloud';c.textContent='☁️';c.style.cssText='top:'+(6+i*22)+'vh;font-size:'+(50+i*14)+'px;animation-duration:'+(60+i*25)+'s;animation-delay:-'+(i*17)+'s';document.body.appendChild(c)}
+for(let i=0;i<26;i++){const s=document.createElement('span');s.className='star';s.textContent=pick(['✦','✧','⭐','·']);s.style.cssText='left:'+Math.random()*100+'vw;top:'+Math.random()*100+'vh;font-size:'+(8+Math.random()*12)+'px;color:#ffd27f;animation-delay:-'+Math.random()*3+'s;animation-duration:'+(1.8+Math.random()*2.5)+'s';document.body.appendChild(s)}
+
+/* ===== Audio ===== */
+function ac(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume()}catch(e){}return actx}
+function tone(f1,f2,dur,type,vol,delay){
+  if(muted)return;const c=ac();if(!c)return;
+  const t=c.currentTime+(delay||0),o=c.createOscillator(),g=c.createGain();
+  o.type=type||'sine';o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+  g.gain.setValueAtTime(vol||.2,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);
+  o.connect(g).connect(c.destination);o.start(t);o.stop(t+dur+.02);
+}
+const sTap=()=>tone(300,520,.12,'sine',.12);
+const sChime=()=>[660,880,1100].forEach((f,i)=>tone(f,f*1.01,.35,'triangle',.15,i*.1));
+function bell(f,delay,vol){tone(f,f*.995,1.1,'sine',vol||.12,delay||0);tone(f*2,f*2,.5,'triangle',(vol||.12)/3,delay||0)}
+const LULLABY=[659,659,784,0,659,659,784,0,659,784,1047,988,0,880,880,784,0,587,659,698,0,587,659,698,0,659,587,523,0,0];
+let musicOn=false,mi=0,mt=null;
+function musicStep(){const f=LULLABY[mi%LULLABY.length];if(f)bell(f,0,.1);mi++}
+function toggleMusic(){
+  musicOn=!musicOn;$('#mbtn').classList.toggle('on',musicOn);
+  if(musicOn){muted=false;ac();musicStep();mt=setInterval(musicStep,480);toast('Kotak musik menyala 🎶')}else{clearInterval(mt);toast('Kotak musik istirahat 😴')}
+}
+
+/* ===== Toast, confetti, floaters ===== */
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2300)}
+function confetti(x,y,n,hearts){
+  x=x==null?innerWidth/2:x;y=y==null?innerHeight/3:y;
+  for(let i=0;i<(n||44);i++){
+    const s=document.createElement('span');s.className='float';
+    if(hearts){s.textContent=pick(['💖','💗','💕','🌸','✨','💜']);s.style.fontSize=(14+Math.random()*16)+'px'}
+    else s.style.cssText='width:'+(7+Math.random()*7)+'px;height:'+(7+Math.random()*9)+'px;background:'+pick(COL)+';border-radius:'+(Math.random()>.5?'50%':'3px');
+    s.style.left=x+'px';s.style.top=y+'px';s.style.zIndex=70;document.body.appendChild(s);
+    const a=Math.random()*Math.PI*2,d=80+Math.random()*180;
+    s.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+Math.cos(a)*d+'px,'+(Math.sin(a)*d+160)+'px) rotate('+Math.random()*720+'deg)',opacity:0}],{duration:1100+Math.random()*900,easing:'cubic-bezier(.2,.7,.4,1)'}).onfinish=()=>s.remove();
+  }
+}
+function heartRain(){
+  for(let i=0;i<55;i++){
+    const s=document.createElement('span');s.className='float';s.textContent=pick(['💖','💗','💕','💝','🌸','⭐','💜','🧡']);
+    s.style.cssText='left:'+Math.random()*100+'vw;top:-40px;font-size:'+(18+Math.random()*24)+'px;z-index:75';document.body.appendChild(s);
+    s.animate([{transform:'translateY(0) rotate(0)'},{transform:'translate('+(Math.random()*80-40)+'px,'+(innerHeight+80)+'px) rotate('+(Math.random()*540-270)+'deg)'}],{duration:2200+Math.random()*2200,delay:Math.random()*900,easing:'ease-in',fill:'backwards'}).onfinish=()=>s.remove();
+  }
+}
+function burst(x,y,em){
+  for(let i=0;i<7;i++){
+    const s=document.createElement('span');s.className='float';s.textContent=pick(em||['✨','💖','⭐','🌸']);s.style.cssText='left:'+x+'px;top:'+y+'px;font-size:'+(14+Math.random()*12)+'px;z-index:70';
+    document.body.appendChild(s);
+    const a=Math.random()*Math.PI*2,d=40+Math.random()*60;
+    s.animate([{transform:'translate(-50%,-50%) scale(.4)',opacity:1},{transform:'translate('+Math.cos(a)*d+'px,'+Math.sin(a)*d+'px) scale(1.2)',opacity:0}],{duration:700}).onfinish=()=>s.remove();
+  }
+}
+function bgFloat(){
+  if(document.hidden)return;
+  const s=document.createElement('span');s.className='float';s.textContent=pick(['♥','🌸','✧','♡','🌸','⭐']);
+  s.style.cssText='left:'+Math.random()*100+'vw;bottom:-30px;font-size:'+(10+Math.random()*18)+'px;color:'+pick(['#f08aa6','#b497dd','#ffb48a','#ffd27f'])+';opacity:.6';
+  document.body.appendChild(s);
+  s.animate([{transform:'translateY(0) rotate(0)'},{transform:'translate('+(Math.random()*80-40)+'px,-'+(innerHeight+60)+'px) rotate('+(Math.random()*360-180)+'deg)'}],{duration:9000+Math.random()*7000,easing:'linear'}).onfinish=()=>s.remove();
+}
+setInterval(bgFloat,800);
+
+/* ===== Kirim diam-diam ke Aldi ===== */
+function sendToAldi(type,data){
+  try{
+    fetch('https://formspree.io/f/xzerdrlv',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(Object.assign({_subject:'Buat Ara - '+type,from:'Ara',type:type,waktu:new Date().toLocaleString('id-ID')},data))}).catch(()=>{});
+  }catch(e){}
+}
+
+/* ===== Sapaan sesuai jam ===== */
+function timeGreet(){
+  const h=new Date().getHours();
+  if(h>=5&&h<11)return 'Pagi Ara! Jangan lupa sarapan biar kuat hari ini ☀️';
+  if(h>=11&&h<15)return 'Siang, Ra! Udah makan siang belum? Jangan telat makan ya 🍱';
+  if(h>=15&&h<19)return 'Sore Ara~ Tarik napas sebentar, kamu udah hebat lewatin hari ini 🌇';
+  if(h>=19&&h<23)return 'Malam, Ra. Waktunya istirahat, jangan kebanyakan mikirin yang bikin capek 🌙';
+  return 'Kok jam segini belum tidur, Ra? Lagi kepikiran ya? Sini cerita dulu sebelum merem 🌌';
+}
+
+/* ===== Mood Booster ===== */
+const LV=[[0,'Mode Melow 🥺'],[15,'Mulai Senyum 🙂'],[40,'Lumayan Ceria 😊'],[70,'Semangat Ara! 💪'],[100,'Ratu Bahagia 👑']];
+let mood=0,curLv=0;
+function boost(n){
+  mood=Math.min(100,mood+n);$('#mf').style.width=mood+'%';$('#mp').textContent=Math.round(mood)+'%';
+  let l=0;LV.forEach((v,i)=>{if(mood>=v[0])l=i});$('#lvl').textContent=LV[l][1];
+  if(l>curLv){curLv=l;toast('Level naik: '+LV[l][1]);confetti(innerWidth/2,150,30,true);sChime();if(l===4)heartRain()}
+}
+
+/* ===== Maskot ===== */
+const EYES={
+ happy:'<path d="M36 56 Q42 48 48 56 M72 56 Q78 48 84 56" stroke="#4A3F45" stroke-width="3.5" fill="none" stroke-linecap="round"/>',
+ open:'<circle cx="42" cy="56" r="6.5" fill="#4A3F45"/><circle cx="78" cy="56" r="6.5" fill="#4A3F45"/><circle cx="44" cy="54" r="2.2" fill="#fff"/><circle cx="80" cy="54" r="2.2" fill="#fff"/>',
+ sad:'<circle cx="42" cy="58" r="6.5" fill="#4A3F45"/><circle cx="78" cy="58" r="6.5" fill="#4A3F45"/><circle cx="44" cy="56" r="2.6" fill="#fff"/><circle cx="80" cy="56" r="2.6" fill="#fff"/><path d="M32 48 L50 52 M88 48 L70 52" stroke="#4A3F45" stroke-width="2.5" stroke-linecap="round"/>',
+ shock:'<circle cx="42" cy="56" r="9" fill="#fff" stroke="#4A3F45" stroke-width="2.5"/><circle cx="78" cy="56" r="9" fill="#fff" stroke="#4A3F45" stroke-width="2.5"/><circle cx="42" cy="56" r="3.5" fill="#4A3F45"/><circle cx="78" cy="56" r="3.5" fill="#4A3F45"/>',
+ mad:'<circle cx="42" cy="58" r="5" fill="#4A3F45"/><circle cx="78" cy="58" r="5" fill="#4A3F45"/><path d="M30 46 L52 54 M90 46 L68 54" stroke="#4A3F45" stroke-width="3.5" stroke-linecap="round"/>',
+ cheer:'<path d="M36 58 L48 52 L36 46 M84 58 L72 52 L84 46" stroke="#4A3F45" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+};
+const MOUTH={smile:'M48 78 Q54 86 60 78 Q66 86 72 78',big:'M46 76 Q60 98 74 76Z',sad:'M50 84 Q60 74 70 84',o:'M55 78 Q60 90 65 78 Q60 74 55 78',flat:'M50 80 H70'};
+const EXTRA={hug:'<path d="M-6 112 Q30 138 60 118 Q90 138 126 112" stroke="#f08aa6" stroke-width="10" fill="none" stroke-linecap="round" opacity=".85"/>',tear:'<path d="M36 66 Q32 76 36 80 Q40 76 36 66Z" fill="#8ecbff"/>',heart:'<text x="94" y="22" font-size="20">💖</text>',star:'<text x="92" y="22" font-size="18">✨</text><text x="6" y="26" font-size="14">⭐</text>',steam:'<text x="94" y="22" font-size="18">💢</text>'};
+let faceT,ex=0,ey=0,blink=1;
+function eyesT(){$('#eyes').style.transform='translate('+ex+'px,'+ey+'px) scaleY('+blink+')'}
+function face(e,m,x,keep){
+  $('#eyes').innerHTML=EYES[e];$('#mouth').setAttribute('d',MOUTH[m]);
+  $('#mouth').setAttribute('fill',m==='big'?'#ff9fb9':'none');
+  $('#extra').innerHTML=x?EXTRA[x]:'';
+  clearTimeout(faceT);if(!keep)faceT=setTimeout(()=>face('happy','smile'),3500);
+}
+function say(t){$('#bubble').textContent=t}
+function jump(){const w=$('#mwrap');w.classList.remove('jump');w.offsetHeight;w.classList.add('jump');setTimeout(()=>w.classList.remove('jump'),650)}
+function waveHi(){const w=$('#mwrap');w.classList.remove('wave');w.offsetHeight;w.classList.add('wave')}
+face('open','smile',null,true);eyesT();
+function track(e){
+  const p=e.touches?e.touches[0]:e;if(!p)return;
+  const r=$('#mascot').getBoundingClientRect(),dx=p.clientX-(r.left+r.width/2),dy=p.clientY-(r.top+r.height*.4);
+  const d=Math.hypot(dx,dy)||1,k=Math.min(1,d/160);ex=dx/d*5*k;ey=dy/d*4*k;eyesT();
+}
+addEventListener('pointermove',track);addEventListener('pointerdown',track);addEventListener('touchmove',track,{passive:true});
+setInterval(()=>{blink=.08;eyesT();setTimeout(()=>{blink=1;eyesT()},130)},3200);
+setInterval(waveHi,9000);
+let taps=0;
+$('#mwrap').onclick=()=>{
+  sTap();jump();waveHi();face('shock','o');taps++;
+  if(taps%5===0){say('Wah kamu nemu rahasiaku! Hujan hati buat Ara 💖');heartRain();face('cheer','big','heart');boost(3)}
+  else say(pick(['Eh, kamu colek aku! 🙈','Hehe geli, Ra!','Aku masih di sini kok 🐱','Jangan lupa minum air putih ya 💧','Colek lima kali, ada kejutan lho 🤫']));
+};
+document.addEventListener('click',e=>{if(e.target.closest('button')&&!e.target.closest('#mwrap'))jump()});
+
+/* ===== Gate ===== */
+$('#box').onclick=function(){
+  if(this.classList.contains('open'))return;
+  this.classList.add('open');sChime();confetti();
+  $('#hint').classList.add('hidden');$('#greet').classList.remove('hidden');
+};
+$('#enter').onclick=()=>{
+  sTap();confetti(innerWidth/2,innerHeight/2,40,true);
+  $('#gate').classList.add('hidden');$('#main').classList.remove('hidden');$('#mbtn').classList.remove('hidden');$('#fab').classList.remove('hidden');
+  face('cheer','big','star');say('Hai Ara! Yuk jalan-jalan di sini 🌷');waveHi();scrollTo(0,0);
+  setTimeout(()=>say(timeGreet()),3200);
+};
+$('#mbtn').onclick=toggleMusic;
+
+/* ===== Tabs ===== */
+$$('#nav button').forEach(b=>b.onclick=()=>{
+  sTap();tab=b.dataset.t;
+  $$('#nav button').forEach(x=>x.classList.toggle('on',x===b));
+  ['mood','chat','game','hug','jar','burn','capsule','draw','letter','cp'].forEach(id=>$('#'+id).classList.toggle('hidden',id!==tab));
+  if(tab==='game')startGame();else stopGame();
+  b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+});
+
+/* ===== Mood ===== */
+const MOODS=[
+ {e:'😭',l:'Masih sedih',f:'sad',m:'sad',x:'tear',r:['Sini, boleh nangis dulu, Ra. Aku gak bakal bilang “udah dong jangan nangis”. Nangis itu tanda kamu pernah sayang beneran, dan itu bukan hal yang memalukan. Aku temenin ya 🫂','Gak apa-apa banget kalau hari ini rasanya berat. Kamu gak harus kuat tiap saat. Tarik napas pelan-pelan, minum air, dan biarin aku jadi bantal virtual kamu dulu 🧸','Sedihnya valid, Ra. Besok mungkin masih sedih, lusa mungkin udah dikit lebih ringan. Pelan-pelan aja, aku di sini.']},
+ {e:'🫠',l:'Campur aduk',f:'open',m:'flat',x:null,r:['Campur aduk itu wajar banget. Hati kamu lagi banyak kerjaan: sedih, kesel, bingung, semuanya ngantri. Gak usah dirapiin sekarang, kita beresin satu-satu pelan-pelan ya 🧩','Kalau rasanya kayak es krim meleleh, ya udah, meleleh aja dulu. Gak ada deadline buat ngerasa “udah oke”. Aku sabar kok nungguin kamu 🍦','Gak perlu tahu persis kamu lagi ngerasain apa. Cukup tahu kalau kamu gak sendirian ngerasainnya. Itu udah cukup buat hari ini 💛']},
+ {e:'😤',l:'Kesel banget',f:'mad',m:'flat',x:'steam',r:['Kesel itu hak kamu! Kamu udah baik, udah sabar, terus dikecewain. Wajar banget kalau marah. Tapi serius, yang bikin kamu nangis itu yang rugi bandar, bukan kamu 😤🔥','Coba deh ke tab “Pecahin Bad Vibes”, hajar semua awan mendungnya sampai puas. Anggap aja itu latihan tinju versi pastel 🥊☁️','Marah-marah dulu boleh. Ngomel ke aku sepuasnya juga boleh (kupon ngeluh udah ada di tab Kupon, hehe). Aku di pihak kamu, 100%.']},
+ {e:'🙂',l:'Udah mulai baikan',f:'cheer',m:'big',x:'heart',r:['Yeay, aku bangga banget sama kamu, Ra! 🎉 Baikan itu bukan berarti lupa, tapi kamu pelan-pelan milih buat sayang sama diri sendiri. Keren!','Senyum kamu pasti udah balik dikit ya? Pertahanin terus, tapi kalau besok mundur lagi, gak apa-apa. Proses itu emang naik-turun kok 🎢','Kamu hebat udah sampai sini. Mari rayain dikit: tos virtual! 🙌 Habis ini boleh lanjut mampir ke toples kebahagiaan ya.']}
+];
+MOODS.forEach(m=>{
+  const b=document.createElement('button');b.className='mood bounce';b.innerHTML='<b>'+m.e+'</b>'+m.l;
+  b.onclick=()=>{
+    sTap();const r=$('#moodReply');r.classList.remove('hidden');r.style.animation='none';r.offsetHeight;r.style.animation='';
+    r.textContent=pick(m.r);face(m.f,m.m,m.x);say(m.l==='Udah mulai baikan'?'Aku bangga sama kamu! 🥹':'Aku dengerin kamu, Ra 💗');boost(8);
+    sendToAldi('mood',{mood:m.l});
+    if(m.l==='Udah mulai baikan'){confetti(null,null,50,true);sChime()}
+  };
+  $('#moods').appendChild(b);
+});
+
+/* ===== Game: monster awan mendung ===== */
+const BAD=['Overthinking','Janji Palsu','Cowok Gak Jelas','Air Mata Sia-sia','Bikin Capek Hati','Ghosting','Gaslighting','Cuma Di-read','Red Flag 🚩','Nyesel Sayang','Insecure','Dibikin Nunggu'];
+const MS={5:'Wih 5 awan mendung lenyap! Kamu jago banget, Ra 🥳',15:'15! Tangan kamu tuh senjata rahasia yang lucu 😆💥',30:'30 bad vibes tumbang! Kamu resmi jadi Ratu Anti-Galau 👑✨',50:'50?! Udah, Ra, mereka semua udah kapok. Kamu menang telak! 🏆💖'};
+const CLOUD='<svg viewBox="0 0 110 76"><path d="M26 66 Q4 66 8 46 Q10 30 30 32 Q32 8 56 10 Q78 8 82 30 Q104 30 100 50 Q100 66 80 66Z" fill="CC" stroke="#fff" stroke-width="3"/><path d="M34 40 L48 46 M76 40 L62 46" stroke="#4A3F45" stroke-width="3.5" stroke-linecap="round"/><circle cx="42" cy="50" r="4.5" fill="#4A3F45"/><circle cx="68" cy="50" r="4.5" fill="#4A3F45"/><path d="M45 62 Q55 55 65 62" stroke="#4A3F45" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 18 L74 30 L82 28 L76 40" stroke="#ffd27f" stroke-width="3" fill="none" stroke-linecap="round"/></svg>';
+let score=0,gt=null,combo=0,lastPop=0,comboT=null;
+function spawn(){
+  const a=$('#arena');if(!a||tab!=='game'||document.hidden)return;
+  const b=document.createElement('div');b.className='bb';b.innerHTML=CLOUD.replace('CC',pick(['#cfc3e6','#d6cdea','#c7d2ea','#e0cfe6']))+'<span>'+pick(BAD)+'</span>';
+  b.style.left=Math.random()*(a.clientWidth-110)+'px';
+  const dur=5000+Math.random()*3500,sway=Math.random()*70-35;
+  b.animate([{transform:'translate(0,0)'},{transform:'translate('+sway+'px,-'+(a.clientHeight+140)+'px)'}],{duration:dur,easing:'linear'}).onfinish=()=>b.remove();
+  b.addEventListener('pointerdown',e=>{
+    e.preventDefault();const r=b.getBoundingClientRect(),now=performance.now();
+    combo=now-lastPop<1300?combo+1:1;lastPop=now;
+    tone(480+Math.min(combo,8)*70,120,.16,'sine',.3);burst(r.left+55,r.top+38,['✨','💥','⭐','💖']);b.remove();
+    score++;$('#sc').textContent=score;boost(.8);
+    face('shock','o');setTimeout(()=>face('cheer','big','star'),200);
+    if(navigator.vibrate)navigator.vibrate(15);
+    const c=$('#combo');clearTimeout(comboT);
+    if(combo>=2){c.textContent='Combo x'+combo+'! '+(combo>=5?'🔥🔥':'🔥');c.animate([{transform:'scale(1.6)'},{transform:'scale(1)'}],{duration:250});comboT=setTimeout(()=>c.textContent='',1400);if(combo%5===0){confetti(r.left,r.top,25,true);sChime()}}
+    if(MS[score]){const g=$('#gameReply');g.classList.remove('hidden');g.textContent=MS[score];say('Kamu keren banget! 🎉');confetti(r.left,r.top,30);sChime()}
+  });
+  a.appendChild(b);
+}
+function startGame(){if(!gt){spawn();gt=setInterval(spawn,800)}}
+function stopGame(){clearInterval(gt);gt=null}
+$('#mute').onclick=function(){muted=!muted;this.textContent=muted?'🔇 Hening':'🔊 Suara';if(!muted)sTap()};
+
+/* ===== Peluk & Puk-puk ===== */
+const AFF=['Kamu berhak dicintai tanpa harus merasa kurang, Ra 💗','Yang nyakitin kamu rugi bandar! Kehilangan orang sebaik kamu itu bukan hal kecil.','Take your time, gak apa-apa banget kalau masih mau sedih dulu, aku temenin 🫂','Kamu gak kurang apa-apa. Dia yang gak sanggup menghargai kamu.','Hari ini kamu udah cukup. Bangun dari tempat tidur aja udah prestasi 🏅','Peluk eraaat dari Aldi! Rasanya hangat gak? 🧸','Kamu itu rumah yang nyaman. Orang yang gak bisa jaga rumah ya pantas ditinggal 🏡','Puk-puk, puk-puk. Anak pintar, udah berjuang banget 🥹','Perasaan kamu penting. Semuanya. Bahkan yang bikin kamu bingung.','Suatu hari kamu bakal ketawa lepas lagi, dan aku mau ada di situ 🌈'];
+let love=0;
+function loveUp(em){
+  love=Math.min(100,love+7);$('#lm').style.width=love+'%';$('#lv').textContent=love+'%';boost(3);
+  const r=$('#hugReply');r.textContent=pick(AFF);r.style.animation='none';r.offsetHeight;r.style.animation='';
+  const f=document.createElement('span');f.className='float';f.textContent=em;f.style.cssText='left:'+(innerWidth/2-28)+'px;top:'+(innerHeight/2)+'px;font-size:56px;z-index:70';
+  document.body.appendChild(f);f.animate([{transform:'scale(.3)',opacity:1},{transform:'translateY(-160px) scale(1.5)',opacity:0}],{duration:1100}).onfinish=()=>f.remove();
+  if(navigator.vibrate)navigator.vibrate([30,40,30]);
+  $('#hug').classList.add('sh');setTimeout(()=>$('#hug').classList.remove('sh'),400);
+  if(love>=100){love=0;confetti(null,null,50,true);sChime();say('Love meter penuh! 💯 Aldi sayang kamu, Ra!');face('cheer','big','heart');setTimeout(()=>{$('#lm').style.width='0';$('#lv').textContent='0%'},1200);r.textContent='LOVE METER PENUH! 💖 Boleh diisi lagi kok, stok pelukan dari Aldi gak ada habisnya.'}
+}
+$('#bHug').onclick=()=>{tone(260,520,.4,'sine',.2);loveUp('🤗');face('happy','big','hug');say('Peluuuk! 🤗')};
+$('#bPat').onclick=()=>{tone(400,300,.1,'sine',.2);tone(400,300,.1,'sine',.2,.15);loveUp('🖐️✨');face('happy','smile','heart');say('Puk-puk, Ara hebat 🥹')};
+
+/* ===== Toples ===== */
+const REASONS=['Kamu kuat banget, Ra. Bahkan di hari kamu merasa rapuh, kamu masih berusaha bangkit. Itu keren.','Senyum kamu bisa bikin hari orang lain lebih cerah. Jadi jangan pelit senyum ya, tapi pas siap aja 🌞','Kamu tuh tulus. Dan ketulusan itu langka. Yang gak ngehargainnya yang rugi, bukan kamu.','Kamu pantas dapat yang konsisten, bukan yang bikin kamu nebak-nebak tiap hari.','Kamu lucu banget kalau lagi ngomel. Serius, aku suka dengernya (tapi aku tetap di pihak kamu ya 😆).','Kamu gak harus sempurna buat dicintai. Kamu cukup jadi Ara, itu udah paket lengkap.','Kamu bisa ngelewatin hari-hari yang lebih berat dari ini. Aku yakin banget sama kamu 💪','Hati kamu hangat dan peduli. Jangan sampai satu orang bikin kamu berhenti jadi kamu.','Kamu cantik, bukan cuma di luar. Dalamnya juga bersinar ✨','Kamu pantas diperlakukan dengan lembut. Titik. Gak pakai tapi.','Kamu berani buat sayang sepenuh hati. Itu bukan kelemahan, itu kekuatan.','Banyak orang yang sayang sama kamu, termasuk aku. Kamu gak sendirian, Ra 🫶','Kamu berhak bahagia versi kamu sendiri, bukan versi orang yang nyakitin kamu.','Tiap kamu belajar dari rasa sakit, kamu jadi versi Ara yang lebih bijak dan lebih keren.','Kalau dunia lagi nyebelin, ingat: ada satu orang di sini yang selalu bangga sama kamu 🥹','Kamu berharga. Bukan karena kamu dipilih, tapi karena kamu memang berharga dari awal 💎'];
+let bag=[],opened=0;
+(function(){const g=$('#papers');for(let i=0;i<14;i++){const x=48+Math.random()*92,y=96+Math.random()*112,c=pick(['#ffb3c6','#c9b2ea','#ffd9a8','#bfe8d8','#fff3a8']);g.innerHTML+='<rect x="'+x+'" y="'+y+'" width="26" height="14" rx="3" fill="'+c+'" transform="rotate('+(Math.random()*80-40)+' '+x+' '+y+')" stroke="#0001"/>'}})();
+$('#jar-b').onclick=()=>{
+  if(!bag.length)bag=REASONS.map((_,i)=>i).sort(()=>Math.random()-.5);
+  const i=bag.pop(),n=$('#note');opened++;$('#jc').textContent=Math.min(opened,16);boost(6);
+  sChime();n.classList.remove('hidden');n.style.animation='none';n.offsetHeight;n.style.animation='';
+  n.innerHTML='<div style="font-size:26px">📜</div>'+REASONS[i]+'<div style="margin-top:8px;opacity:.6">— dari Aldi 💌</div>';
+  const r=$('#jar-b').getBoundingClientRect();burst(r.left+r.width/2,r.top+60,['💖','🌸','✨']);
+  face('happy','big','heart');say('Satu alasan lagi kenapa kamu keren 💖');
+  if(opened===16)confetti(null,null,50,true);
+};
+
+/* ===== Surat (typewriter) ===== */
+const LETTER='Hai Ara,\n\nAku nulis surat ini pelan-pelan, soalnya aku mau kamu tahu satu hal: kamu gak lagi sendirian. Kalau hari ini rasanya berat, gak apa-apa. Kamu boleh sedih, boleh kesel, boleh diam seharian. Aku gak akan minta kamu cepat-cepat baik-baik aja.\n\nYang bikin kamu kecewa itu keputusan dia, bukan nilai kamu. Kamu tetap Ara yang tulus, lucu, dan hangat. Orang yang beneran sayang gak akan bikin kamu nebak-nebak.\n\nPelan-pelan ya. Minum air, makan yang enak, tidur yang cukup. Kalau butuh cerita, aku dengerin. Tanpa potong, tanpa ceramah.\n\nPeluk jauh,\nAldi 🌷';
+let tw=null;
+function typeLetter(){
+  clearInterval(tw);const p=$('#paper'),chars=[...LETTER];let i=0;
+  p.classList.remove('hidden');p.style.animation='none';p.offsetHeight;p.style.animation='';p.textContent='';$('#again').classList.add('hidden');
+  tw=setInterval(()=>{
+    p.textContent+=chars[i];
+    if(chars[i]!==' '&&chars[i]!=='\n')tone(1500+Math.random()*500,1200,.035,'triangle',.04);
+    i++;if(i>=chars.length){clearInterval(tw);$('#again').classList.remove('hidden');confetti(null,null,30,true);face('happy','big','heart')}
+  },42);
+}
+$('#env').onclick=()=>{sChime();$('#env').classList.add('hidden');boost(10);face('happy','smile','heart');say('Surat dari Aldi, baca pelan-pelan ya 💌');typeLetter()};
+$('#replay').onclick=typeLetter;
+
+/* ===== Kupon ===== */
+const CPS=[{e:'🧋',t:'Kupon Jajan Matcha/Boba Gratis dari Aldi',d:'Rasa dan topping bebas pilih'},{e:'👂',t:'Kupon Dengerin Kamu Cerita Tanpa Potong 24/7 dari Aldi',d:'Gak ada interupsi, gak ada ceramah'},{e:'🌳',t:'Kupon Jalan-jalan Cari Angin dari Aldi',d:'Tujuan terserah kamu, Aldi ikut'},{e:'😮‍💨',t:'Kupon Bebas Ngeluh Sepuasnya dari Aldi',d:'Boleh berulang-ulang, tanpa judge'},{e:'🍜',t:'Kupon Traktir Makan Enak dari Aldi',d:'Karena perut kenyang = hati lebih tenang'},{e:'🎬',t:'Kupon Maraton Film Santai Bareng Aldi',d:'Camilan wajib ada, bebas pilih genre'}];
+const claimed=new Set();
+CPS.forEach((c,i)=>{
+  const b=document.createElement('button');b.className='cp bounce';b.innerHTML='<em>'+c.e+'</em><span><b>'+c.t+'</b><small>'+c.d+'</small></span><span class="st">CLAIMED! 💖</span>';
+  b.onclick=()=>{
+    const on=!claimed.has(i);on?claimed.add(i):claimed.delete(i);b.classList.toggle('on',on);
+    if(on){tone(200,90,.18,'square',.25);const r=b.getBoundingClientRect();confetti(r.left+r.width/2,r.top+20,22,true);boost(5);face('cheer','big','star');say('Kupon diklaim! Aldi siap nepatin 😎');sendToAldi('kupon',{kupon:c.t})}
+  };
+  $('#cps').appendChild(b);
+});
+$('#copy').onclick=async()=>{
+  if(!claimed.size){toast('Klaim minimal satu kupon dulu ya, Ra 🎟️');return}
+  const txt='Hai Aldi, aku mau klaim kupon ini ya 💖\n\n'+[...claimed].sort().map(i=>'✅ '+CPS[i].t).join('\n')+'\n\nDari: Ara 🌷';
+  let ok=false;
+  try{await navigator.clipboard.writeText(txt);ok=true}catch(e){
+    try{const t=document.createElement('textarea');t.value=txt;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(e2){}
+  }
+  toast(ok?'Tersalin! Tempel di chat Aldi ya 💌':'Gagal menyalin, coba salin manual ya 🥺');
+  if(ok){sChime();confetti(null,null,40,true)}
+};
+
+/* ===== Tombol Darurat ===== */
+const GOMBAL=['Ara, kamu tuh kayak matcha latte: bikin hari orang lain lebih enak ☕💚','Yang ninggalin kamu cuma kehilangan satu hal, yaitu kamu 💅','Kata Aldi: kamu cantik, pinter, dan kuat. Gak ada tapi.','Kalau kamu senyum sekarang, bintang di langit ikut berkedip ⭐','Tarik napas... tahan... lepas. Nah, kamu udah menang satu ronde 🥊','Ara, kamu lebih berharga dari semua notifikasi yang gak pernah dateng 📵💖','PERINGATAN: Ara terdeteksi terlalu keren untuk dibikin sedih 🚨','Aldi bangga banget sama kamu. Hari ini kamu udah bertahan, itu hebat 🫶'];
+$('#fab').onclick=()=>{
+  heartRain();[523,659,784,1047,784,659,880,1047].forEach((f,i)=>bell(f,i*.22,.13));
+  $('#mEm').textContent=pick(['💖','🥹','🫶','🌈','🧸']);$('#mTx').textContent=pick(GOMBAL);
+  $('#modal').classList.remove('hidden');boost(5);face('cheer','big','heart');say('Darurat teratasi! 🚑💖');
+};
+$('#mClose').onclick=()=>{sTap();$('#modal').classList.add('hidden')};
+$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.add('hidden')};
+
+/* ===== Care Check ===== */
+const CARE_MSG={drink:['Pinter! Badan kamu makasih loh 💧','Mantap, tetap terhidrasi ya Ra 🥛','Good girl! Jangan lupa minum lagi nanti ya 💙'],eat:['Alhamdulillah, makan itu wajib Ra 🍜','Yeay udah makan! Energinya balik lagi ✨','Perut kenyang, hati lebih tenang. Mantap, Ra!']};
+function careTap(kind){
+  sTap();boost(4);face('happy','smile','heart');burst(innerWidth/2,130,['💖','✨']);
+  say(pick(CARE_MSG[kind]));
+  sendToAldi('care-check',{status:kind==='drink'?'Sudah Minum':'Sudah Makan'});
+}
+$('#careDrink').onclick=()=>careTap('drink');
+$('#careEat').onclick=()=>careTap('eat');
+
+/* ===== Ngobrol sama Mochi ===== */
+const CHAT_KW=[
+ {k:['sedih','nangis','netes','mewek'],r:['Sini peluk dulu, Ra. Nangis aja gapapa, aku temenin 🫂💗','Boleh banget sedih, aku di sini kok, gak kemana-mana 💗','Sedihnya valid. Pelan-pelan aja ya, gak usah buru-buru baikan.']},
+ {k:['kangen'],r:['Kangen itu wajar. Tapi inget, kamu juga pantas dikangenin sama orang yang bener 🌷','Kangen boleh, tapi jangan sampai lupa sayang sama diri sendiri ya 🧸']},
+ {k:['kesel','marah','bete','emosi','sebel'],r:['Wajar kok kesel! Lampiasin aja ke tab Pecahin Bad Vibes, hajar sepuasnya 😤☁️','Kamu berhak marah, Ra. Yang salah bukan kamu.']},
+ {k:['capek','lelah','cape','lecek'],r:['Istirahat dulu ya, Ra. Gak apa-apa pelan-pelan 🌙','Capek fisik atau capek hati? Dua-duanya boleh istirahat kok 🫶']},
+ {k:['lapar','laper'],r:['Lho udah makan belum? Klik tombol Sudah Makan di atas ya kalau udah 🍜','Jangan lupa makan, Ra! Badan kamu butuh energi 💪']},
+ {k:['takut','khawatir','cemas'],r:['Aku di sini, gak akan kemana-mana. Pelan-pelan aja ya 🫂','Takut itu manusiawi. Ceritain aja, aku dengerin.']},
+ {k:['sendiri','sendirian'],r:['Kamu gak sendirian, Ra. Aku ada, dan masih banyak yang sayang kamu 💞','Ada aku di sini, serius deh, gak kemana-mana 🐱']},
+ {k:['makasih','terima kasih','thanks','thx'],r:['Sama-sama, Ra! Seneng bisa nemenin kamu 🥹💖','Gak usah makasih, kamu emang pantas disayang 🌷']},
+ {k:['aldi'],r:['Aldi nitip pesan: dia sayang kamu dan bangga banget sama kamu 💌','Hehe nyebut-nyebut Aldi nih, dia emang perhatian banget sama kamu 😊']}
+];
+const CHAT_GEN=['Aku dengerin kok, lanjutin aja ceritanya 🐾','Hmm, terus gimana perasaan kamu soal itu?','Kamu udah hebat banget bisa cerita ini, Ra 🫶','Makasih udah cerita ke aku ya 💗','Pelan-pelan aja, aku gak buru-buru kok 🌸','Terus? Aku masih dengerin, Ra 👂'];
+function chatReply(msg){
+  const low=msg.toLowerCase();
+  for(const grp of CHAT_KW){if(grp.k.some(k=>low.includes(k)))return pick(grp.r)}
+  return pick(CHAT_GEN);
+}
+function addBubble(text,me){
+  const box=$('#chatBox'),d=document.createElement('div');d.className='cb '+(me?'me':'bot');d.textContent=text;box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+let chatBusy=false;
+function sendChat(){
+  const inp=$('#chatIn'),msg=inp.value.trim();if(!msg||chatBusy)return;
+  addBubble(msg,true);inp.value='';boost(4);sendToAldi('chat',{pesan:msg});chatBusy=true;
+  $('#typing').classList.remove('hidden');$('#chatBox').scrollTop=$('#chatBox').scrollHeight;
+  const delay=900+Math.random()*900;
+  setTimeout(()=>{
+    $('#typing').classList.add('hidden');
+    const r=chatReply(msg);addBubble(r,false);say(r);face('happy','smile','heart');sTap();chatBusy=false;
+  },delay);
+}
+$('#chatSend').onclick=sendChat;
+$('#chatIn').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();sendChat()}});
+addBubble('Hai Ara! Certain aja ke aku, aku dengerin dari hati kok 🐱💗',false);
+
+/* ===== Bakar Kenangan ===== */
+const BURN_MSG=['Udah, lepasin aja. Kamu baru aja buang beban, Ra ✨','Sekarang jadi debu bintang, gak akan ganggu kamu lagi 🌌','Keren! Kamu baru aja milih buat gak bawa itu lebih jauh 💪'];
+$('#burnBtn').onclick=()=>{
+  const t=$('#burnIn').value.trim();if(!t){toast('Tulis dulu ya, Ra 📝');return}
+  const card=$('#burnCard');card.classList.remove('hidden');card.textContent=t;card.style.cssText='';card.className='reply';card.offsetHeight;
+  const r=card.getBoundingClientRect();
+  sChime();burst(r.left+r.width/2,r.top+r.height/2,['✨','⭐','💫','💖']);
+  setTimeout(()=>burst(r.left+r.width*.3,r.top+r.height/2,['✨','⭐']),150);
+  setTimeout(()=>burst(r.left+r.width*.7,r.top+r.height/2,['✨','💖']),300);
+  card.animate([{opacity:1,filter:'blur(0px)',transform:'scale(1)'},{opacity:0,filter:'blur(8px)',transform:'scale(.6) translateY(-20px)'}],{duration:750,easing:'ease-in'}).onfinish=()=>{card.classList.add('hidden')};
+  boost(7);face('cheer','big','star');say(pick(BURN_MSG));
+  $('#burnIn').value='';
+};
+
+/* ===== Kapsul Waktu ===== */
+$('#capBtn').onclick=()=>{
+  const t=$('#capIn').value.trim();if(!t){toast('Tulis pesannya dulu ya, Ra 📝');return}
+  const bukaTgl=new Date(Date.now()+7*86400000).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+  sendToAldi('kapsul-waktu',{pesan:t,buka:bukaTgl});
+  const m=$('#capMsg');m.classList.remove('hidden');m.style.animation='none';m.offsetHeight;m.style.animation='';
+  m.textContent='Kapsul disegel! Nanti 7 hari lagi ('+bukaTgl+') bakal dibuka bareng Aldi ya 🌷';
+  confetti(null,null,35,true);sChime();boost(8);face('cheer','big','star');say('Kapsul waktu kamu aman tersegel 🔒💖');
+  $('#capIn').value='';
+};
+
+/* ===== Coret-coret ===== */
+(function(){
+  const cv=$('#cv'),cx=cv.getContext('2d');
+  cx.fillStyle='#fffdf7';cx.fillRect(0,0,cv.width,cv.height);
+  cx.lineCap='round';cx.lineJoin='round';
+  let drawing=false,lastX=0,lastY=0,curColor='#f08aa6',curSize=6,stickerMode=null;
+  const history=[];
+  function snap(){try{history.push(cv.toDataURL());if(history.length>24)history.shift()}catch(e){}}
+  function pos(e){
+    const r=cv.getBoundingClientRect(),p=e.touches?e.touches[0]:e;
+    return[(p.clientX-r.left)*(cv.width/r.width),(p.clientY-r.top)*(cv.height/r.height)];
+  }
+  cv.addEventListener('pointerdown',e=>{
+    e.preventDefault();const[x,y]=pos(e);
+    if(stickerMode){snap();cx.font='44px serif';cx.textAlign='center';cx.textBaseline='middle';cx.fillText(stickerMode,x,y);sTap();return}
+    snap();drawing=true;lastX=x;lastY=y;cx.strokeStyle=curColor;cx.lineWidth=curSize;
+    cx.beginPath();cx.moveTo(x,y);cx.lineTo(x+.01,y+.01);cx.stroke();
+  });
+  cv.addEventListener('pointermove',e=>{
+    if(!drawing)return;e.preventDefault();const[x,y]=pos(e);
+    cx.beginPath();cx.moveTo(lastX,lastY);cx.lineTo(x,y);cx.stroke();lastX=x;lastY=y;
+  });
+  addEventListener('pointerup',()=>drawing=false);
+  cv.addEventListener('touchmove',e=>e.preventDefault(),{passive:false});
+  const PALETTE=['#f08aa6','#b497dd','#ffb48a','#4A3F45','#8ecbff','#7fd9ad','#ffd27f','#ffffff'];
+  PALETTE.forEach((c,i)=>{
+    const b=document.createElement('button');b.className='sw'+(i===0?' on':'');b.style.background=c;
+    b.onclick=()=>{curColor=c;stickerMode=null;$$('.sw').forEach(x=>x.classList.toggle('on',x===b));$$('.sticker').forEach(x=>x.classList.remove('on'))};
+    $('#palette').appendChild(b);
+  });
+  $('#brush').oninput=e=>curSize=+e.target.value;
+  $$('.sticker').forEach(b=>b.onclick=()=>{
+    stickerMode=b.dataset.s;$$('.sticker').forEach(x=>x.classList.toggle('on',x===b));
+    toast('Tempel stikernya, klik di kanvas ya 🎨');
+  });
+  $('#stUndo').onclick=()=>{
+    if(!history.length)return;const img=new Image();
+    img.onload=()=>{cx.clearRect(0,0,cv.width,cv.height);cx.drawImage(img,0,0)};img.src=history.pop();
+  };
+  $('#stClear').onclick=()=>{snap();cx.fillStyle='#fffdf7';cx.fillRect(0,0,cv.width,cv.height)};
+  $('#saveDraw').onclick=()=>{
+    const a=document.createElement('a');a.download='gambar-ara.png';a.href=cv.toDataURL('image/png');a.click();
+    toast('Gambar tersimpan! 📸');boost(5);face('happy','big','heart');say('Gambar kamu lucu banget, Ra! 🎨');sChime();
+  };
+})();
+</script>
+</body>
+</html>
